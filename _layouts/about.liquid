@@ -1,0 +1,171 @@
+---
+layout: default
+---
+<div class="post">
+  <header class="post-header">
+    <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
+      {% if page.profile %}
+        {% if page.profile.image %}
+          {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+          {% if page.profile.image_circular %}
+            {% assign profile_image_class = 'img-fluid z-depth-1 rounded-circle' %}
+          {% else %}
+            {% assign profile_image_class = 'img-fluid z-depth-1
+      rounded' %}
+          {% endif %}
+          {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.25}}px, (min-width: 576px)
+      25vw, 95vw"{% endcapture %}
+          {%
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            cache_bust=true
+          %}
+        {% endif %}
+        {% comment %} {% if page.profile.more_info %}
+          <div class="more-info">{{ page.profile.more_info }}</div>
+        {% endif %} {% endcomment %}
+    {% endif %}
+    </div>
+    <h1 class="post-title">
+      {% if site.title == 'blank' %}
+        <span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }}
+        {{ site.last_name }}
+      {% else %}
+        {{ site.title }}
+      {% endif %}
+    </h1>
+    <p class="content" style="margin-bottom: 0px;font-size: 1.5em;">{{ page.subtitle }}</p> 
+    <p class="content"> {{ page.affiliation }}</p>
+    <!-- Social -->
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+
+        <div class="contact-note">{{ site.contact_note }}</div>
+      </div>
+    {% endif %}
+    {% comment %} <p class="desc">{{ page.subtitle }}</p> {% endcomment %}
+  </header>
+
+  <article>
+    <br>
+    {% comment %} <h3><a style="color: inherit;">Bio</a></h3> {% endcomment %}
+    <div class="clearfix">{{ content }}</div>
+
+    <!-- News -->
+    {% if page.news and site.announcements.enabled %}
+      <h2>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+      </h2>
+      {% include news.liquid limit=true %}
+    {% endif %}
+
+    <!-- Latest posts -->
+    {% if site.latest_posts.enabled %}
+      <h2>
+        <a href="{{ '/blog/' | relative_url }}" style="color: inherit">latest posts</a>
+      </h2>
+      {% include latest_posts.liquid %}
+    {% endif %}
+
+    <!-- Selected papers -->
+    {% if page.selected_papers %}
+      <h3>
+        Selected Publications & Preprints <a href="{{ '/publications/' | relative_url }}">[full list]</a>
+      </h3>
+      <p class="post-description">(*) denotes equal contribution; (†) denotes corresponding author</p>
+      {% include selected_papers.liquid %}
+    {% endif %}
+
+    {% if site.newsletter.enabled and site.footer_fixed %}
+      {% include scripts/newsletter.liquid center=true %}
+    {% endif %}
+    
+    <h3><a style="color: inherit;">Experience</a></h3>
+    <br>
+            
+              
+      <table border="0">
+              <tbody>
+
+
+
+      <tr>
+      <td width="80" style="vertical-align: middle;"><img src='../assets/img/nvidia.png'  border="1" width="100%"></td>
+      <td width="20"></td>
+      <td> 
+              <p style="margin: 0; padding: 0;"><strong>
+          
+          <a href=https://research.nvidia.com/labs/dir/ target='_blank'>Deep Imagination Research, NVIDIA</a>
+          </strong>
+      </p>
+          <p style="margin: 0; padding: 0;">Research Intern</p>
+          
+          
+          <p style="font-size: 10pt; margin: 0; padding: 0;">2024.06 - Present</p>
+          <p style="font-size: 10pt; margin: 0; padding: 0;">Santa Clara, California, USA</p>
+          
+      </td>  
+      </tr>
+      <tr height="10"></tr>
+
+
+      <tr>
+      <td width="80" style="vertical-align: middle; text-align: center;"><img src='../assets/img/shengshu.png' border="1" width="80%"></td>
+      <td width="20"></td>
+      <td> 
+              <p style="margin: 0; padding: 0;"><strong>
+          
+          <a href=https://www.shengshu-ai.com/home target='_blank'>Shengshu Technology</a>
+          </strong>
+      </p>
+          <p style="margin: 0; padding: 0;">Research Intern</p>
+          
+          
+          <p style="font-size: 10pt; margin: 0; padding: 0;">2023.03 - 2024.05</p>
+          <p style="font-size: 10pt; margin: 0; padding: 0;">Beijing, China</p>
+          
+      </td>  
+      </tr>
+      <tr height="10"></tr>
+
+
+      <tr></tr>
+      <td width="80" style="vertical-align: middle; text-align: center;"><img src='../assets/img/kuaishou.png' border="1" width="80%"></td>
+      <td width="20"></td>
+      <td> 
+              <p style="margin: 0; padding: 0;"><strong>
+          
+          <a href=https://www.kuaishou.com/en target='_blank'>Y-tech, Kuaishou Technology</a>
+          </strong>
+      </p>
+          <p style="margin: 0; padding: 0;">Engineering Intern</p>
+          
+          
+          <p style="font-size: 10pt; margin: 0; padding: 0;">2021.06 - 2021.08</p>
+          <p style="font-size: 10pt; margin: 0; padding: 0;">Beijing, China</p>
+          
+      </td>  
+      </tr>
+      <tr height="10"></tr>
+
+
+
+      </tbody>
+      </table>
+
+    <h3><a style="color: inherit;">Miscellaneous</a></h3>
+    <p>My slides for TSAIL reading group:</p>
+    <ul>
+      <li><a href="../assets/pdf/CNF.pdf" target="_blank">Continuous Normalizing Flows for Generative Modeling</a></li>
+      <li><a href="../assets/pdf/PFGM.pdf" target="_blank">Poisson Flow Generative Models</a></li>
+      <li><a href="../assets/pdf/CM.pdf" target="_blank">Consistency Models</a></li>
+    </ul>
+  
+  
+  <h3><a style="color: inherit;">Personal</a></h3>
+  <ul></ul>
+<li>I enjoy playing ping-pong🏓 in my free time. I also watch esports (especially <a href="https://www.leagueoflegends.com/">League of Legends</a>) and have a taste for Chinese calligraphy (<a href="assets/img/calligraphy.png">my piece</a> of the poem 'Qingming' ("清明" in Chinese)).</li>
+<li>I am enthusiastic about math since middle school. In high school, I gathered and created a set of interesting math exercises to form a test (<a href="assets/pdf/math_test.pdf">[Problems]</a><a href="assets/pdf/math_test_answer.pdf">[Answers]</a>, in Chinese).</li>
+</ul>
+  </article>
+</div>
