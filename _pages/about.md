@@ -21,4 +21,4 @@ social: true # includes social icons at the bottom of the page
 
 I'm a third-year Ph.D. student at the [Department of Computer Science and Technology, Tsinghua University](https://www.cs.tsinghua.edu.cn/csen/), advised by [Prof. Jun Zhu](https://ml.cs.tsinghua.edu.cn/~jun/index.shtml). Before that, I received my B.E. degree from the same department at Tsinghua University in 2022. In the summer of 2024, I was honored to have an internship at [NVIDIA Deep Imagination Research](https://research.nvidia.com/labs/dir/) in the San Francisco Bay Area.
 
-My research focuses on developing principled, insightful, scalable, efficient and effective training/inference techniques for deep generative models, with a particular emphasis on diffusion-related models.
+My research focuses on developing principled, insightful, scalable, efficient and effective training/inference techniques for deep generative models, with a particular emphasis on diffusion-related models. I am also interested in reinforcement learning (RL) and multimodal large language models (MLLMs).

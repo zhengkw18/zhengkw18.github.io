@@ -333,6 +333,7 @@
               >
             </a>
           {% endif %}
+          <div style="display: flex; gap: 8px; align-items: center;">
           {% if entry.pwc1 %}
             <a
               href="{{ entry.pwc1_link }}"
@@ -353,6 +354,28 @@
               >
               </a>
           {% endif %}
+          </div><div style="display: flex; gap: 8px; align-items: center;">
+          {% if entry.pwc3 %}
+            <a
+              href="{{ entry.pwc3_link }}"
+              role="button"
+            >
+              <img
+                src="{{ entry.pwc3 }}"
+              >
+            </a>
+          {% endif %}
+          {% if entry.pwc4 %}
+            <a
+              href="{{ entry.pwc4_link }}"
+              role="button"
+            >
+              <img
+                src="{{ entry.pwc4 }}"
+              >
+              </a>
+          {% endif %}
+          </div>
         </div>
       {% endif %}
     {% endif %}
