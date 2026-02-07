@@ -251,6 +251,16 @@
       {% if entry.website %}
         <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
       {% endif %}
+      {% if entry.github_star %}
+            <a
+              href="{{ entry.code }}"
+              role="button"
+            >
+              <img
+                src="{{ entry.github_star }}"
+              >
+            </a>
+          {% endif %}
     </div>
     {% if site.enable_publication_badges %}
       {% assign entry_has_altmetric_badge = false %}

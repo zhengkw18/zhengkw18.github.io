@@ -30,6 +30,9 @@
  - firstname: ["Qinsheng"]
    url: https://qsh-zh.github.io/
 
+ - firstname: ["Jintao"]
+   url: https://jt-zhang.github.io/
+
  - firstname: ["Haoji"]
    url: https://zhang9302002.github.io/
 
@@ -59,6 +62,10 @@
  - firstname: ["Hanzi"]
    url: https://hanzimao.me/
 
+"ma":
+ - firstname: ["Qianli"]
+   url: https://qianlim.github.io/
+
 "liu":
  - firstname: ["Ming-Yu"]
    url: https://mingyuliu.net/
@@ -73,6 +80,9 @@
  - firstname: ["Yikai"]
    url: https://yikaiw.github.io/
 
+ - firstname: ["Haoxiang"]
+   url: https://haoxiang-wang.github.io/
+
 "xiao":
  - firstname: ["Zihao"]
    url: https://scholar.google.com/citations?user=fOfxmrcAAAAJ
@@ -84,3 +94,15 @@
 "zhao":
  - firstname: ["Min"]
    url: https://gracezhao1997.github.io/
+
+"ermon":
+ - firstname: ["Stefano"]
+   url: https://cs.stanford.edu/~ermon/
+
+"balaji":
+ - firstname: ["Yogesh"]
+   url: https://yogeshbalaji.github.io/
+
+"ye":
+ - firstname: ["Haotian"]
+   url: https://haotianye.com/
